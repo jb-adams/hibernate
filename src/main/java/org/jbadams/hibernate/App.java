@@ -18,6 +18,20 @@ import org.jbadams.hibernate.activity.scripts.DeleteEmployee;
 import org.jbadams.hibernate.one_to_one_uni.test.TestJdbcOneToOneUni;
 import org.jbadams.hibernate.one_to_one_uni.script.CreateInstructor;
 import org.jbadams.hibernate.one_to_one_uni.script.DeleteInstructor;
+import org.jbadams.hibernate.one_to_many.script.CreateInstructorOneToMany;
+import org.jbadams.hibernate.one_to_many.script.CreateCoursesOneToMany;
+import org.jbadams.hibernate.one_to_many.script.GetInstructorCoursesOneToMany;
+import org.jbadams.hibernate.one_to_many.script.DeleteCourseOneToMany;
+import org.jbadams.hibernate.eager_vs_lazy.script.EagerLazy;
+import org.jbadams.hibernate.eager_vs_lazy.script.FetchJoin;
+import org.jbadams.hibernate.one_to_many_uni.script.CreateCourseAndReviewsOneToManyUni;
+import org.jbadams.hibernate.one_to_many_uni.script.GetCourseAndReviewsOneToManyUni;
+import org.jbadams.hibernate.one_to_many_uni.script.DeleteCourseAndReviewsOneToManyUni;
+import org.jbadams.hibernate.many_to_many.script.CreateCourseAndStudentsManyToMany;
+import org.jbadams.hibernate.many_to_many.script.AddCoursesForMaryManyToMany;
+import org.jbadams.hibernate.many_to_many.script.GetCoursesForMaryManyToMany;
+import org.jbadams.hibernate.many_to_many.script.DeleteCourseManyToMany;
+import org.jbadams.hibernate.many_to_many.script.DeleteStudentManyToMany;
 
 public class App {
     public String getGreeting() {
@@ -58,6 +72,34 @@ public class App {
             GetInstructorDetail.run(args);
         } else if (args[0].equals("DeleteInstructorDetail")) {
             DeleteInstructorDetail.run(args);
+        } else if (args[0].equals("CreateInstructorOneToMany")) {
+            CreateInstructorOneToMany.run(args);
+        } else if (args[0].equals("CreateCoursesOneToMany")) {
+            CreateCoursesOneToMany.run(args);
+        } else if (args[0].equals("GetInstructorCoursesOneToMany")) {
+            GetInstructorCoursesOneToMany.run(args);
+        } else if (args[0].equals("DeleteCourseOneToMany")) {
+            DeleteCourseOneToMany.run(args);
+        } else if (args[0].equals("EagerLazy")) {
+            EagerLazy.run(args);
+        } else if (args[0].equals("FetchJoin")) {
+            FetchJoin.run(args);
+        } else if (args[0].equals("CreateCourseAndReviewsOneToManyUni")) {
+            CreateCourseAndReviewsOneToManyUni.run(args);
+        } else if (args[0].equals("GetCourseAndReviewsOneToManyUni")) {
+            GetCourseAndReviewsOneToManyUni.run(args);
+        } else if (args[0].equals("DeleteCourseAndReviewsOneToManyUni")) {
+            DeleteCourseAndReviewsOneToManyUni.run(args);
+        } else if (args[0].equals("CreateCourseAndStudentsManyToMany")) {
+            CreateCourseAndStudentsManyToMany.run(args);
+        } else if (args[0].equals("AddCoursesForMaryManyToMany")) {
+            AddCoursesForMaryManyToMany.run(args);
+        } else if (args[0].equals("GetCoursesForMaryManyToMany")) {
+            GetCoursesForMaryManyToMany.run(args);
+        } else if (args[0].equals("DeleteCourseManyToMany")) {
+            DeleteCourseManyToMany.run(args);
+        } else if (args[0].equals("DeleteStudentManyToMany")) {
+            DeleteStudentManyToMany.run(args);
         } else {
             System.out.println("No Flag Provided");
         }
